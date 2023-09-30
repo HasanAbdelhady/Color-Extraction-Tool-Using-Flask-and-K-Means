@@ -1,0 +1,247 @@
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  :root{
+    --body-background-color1: #3498db;
+    --body-background-color2: #1abc9c;
+    --card-background-color: #fff;
+    --card-h1-background-color: #3498db;
+    --card-h1-hover-background-color: #3498db;
+    --h2-font:#818181;
+
+  }
+
+  .dark-theme{
+    --body-background-color1: #212534;
+    --body-background-color2:#072e26;
+    --card-background-color: #191c29;
+    --card-h1-background-color: #033454;
+    --h2-font:#fff;
+  }
+
+  body {
+    background: linear-gradient(to bottom, var(--body-background-color1), var(--body-background-color2));
+    font-family: Arial, sans-serif;
+  }
+
+  #icon{
+    width: 40px;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  .card {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: var(--card-background-color);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+    
+
+  }
+
+  .card:hover {
+    transform: scale(1.05) ;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    color: rgb(88 199 250 / 100%);
+    transition: color 1s;
+    text-shadow: 5px 3px 4px rgba(152, 158, 263, 0.5);
+    background-color: var(--card-background-color);
+
+  }
+
+  .card h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #fff;
+    background-color: #3498db;
+    padding: 15px 20px;
+    border-radius: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .card h1:hover {
+    background-color: #015343;
+  }
+
+  .choose-photo-label {
+    display: block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  .choose-photo-label:hover {
+    background-color: #0056b3;
+  }
+
+  #fileInput {
+    display: none;
+  }
+
+  #fileLabelText {
+    display: inline-block;
+    padding: 15px 20px;
+    border: 1px solid #007bff;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+
+  #fileInput:hover + #fileLabelText {
+    background-color: #0056b3;
+  }
+
+  .k {
+    width: 500px;
+    padding: 15px;
+    margin: 10px 0;
+    border: 2px solid #007bff;
+    border-radius: 10px; 
+    font-size: 18px;
+    font-weight: bold;
+    color: #007bff;
+    background-color: #f4f4f4;
+    text-align: center; 
+    transition: border-color 0.3s ease-in-out;
+  }
+
+  .image_url{
+    width: 500px;
+    padding: 15px;
+    margin: 10px 0;
+    border: 2px solid #176c02;
+    border-radius: 10px; 
+    font-size: 18px;
+    font-weight: bold;
+    color: #176c02;
+    background-color: #f4f4f4;
+    text-align: center; 
+    transition: border-color 0.3s ease-in-out;
+
+  }
+  .k:hover {
+    border-color: #0056b3; 
+  }
+  .image_url:hover{
+    border-color: #0f7e05; 
+
+
+  }
+
+  .k::placeholder{
+    color: rgba(0, 123, 255, 0.3); /* Adjust the alpha value (0.5 in this example) for opacity */
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+  }
+
+  .image_url::placeholder{
+    color: rgba(5, 100, 60, 0.3); /* Adjust the alpha value (0.5 in this example) for opacity */
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+
+  }
+
+  input[type="submit"] {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 10px
+  }
+
+  input[type="submit"]:hover {
+    background-color: #1e7e34;
+  }
+
+  h2 {
+    font-size: 24px;
+    margin-top: 20px;
+    color: var(--h2-font);
+  } 
+
+  img {
+    max-width: 100%;
+    margin: 20px 0;
+  }
+
+  .color-palette {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .color-palette {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+
+  .color-swatch {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .color-info {
+    position: absolute;
+    top: -30px; /* Adjust the top position to place the RGB info above the swatch */
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2px 5px;
+    border: 1px solid #ccc;
+    display: none;
+    white-space: nowrap;
+    pointer-events: none;
+  }
+
+  .color-swatch:hover .color-info {
+    display: block;
+    font-family: fantasy;
+  }
+
+
+  body:before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--body-background-color1), var(--body-background-color2));
+    opacity: 1.2;
+    z-index: -1;
+  }
+  .color-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: center; /* Center the color boxes horizontally */
+    align-items: center; /* Center the color boxes vertically */
+  }
+p{
+  font-size: 24;
+}
