@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Super Cool Color Extraction Tool</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+    <link
+      rel="shortcut icon"
+      type="x-icon"
+      href="{{ url_for('static', filename='camera.png') }}"
+    />
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </head>
+  <body>
+    <img
+      src="{{ url_for('static', filename='moon.png') }}"
+      alt="moon"
+      id="icon"
+    />
+    <div class="card">
+      <h1>Upload and Analyze an Image</h1>
+      <form action="/upload" method="POST" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*" id="fileInput" />
+        <label for="fileInput" class="choose-photo-label"
+          ><span id="fileLabelText">Choose a Photo</span></label
+        >
+        <h2>OR</h2>
+
+        <input
+          type="text"
+          name="image_url"
+          id="image_url"
+          placeholder=" ~  HTTP HERE ~ Enter Image URL "
+          class="image_url"
+        />
+
+        <p style="padding: 5px"></p>
+
+        <input
+          type="number"
+          name="k"
+          id="k"
+          min="1"
+          max="200"
+          class="k"
+          placeholder="Enter The Number Of Colors Needed"
+          required
+        />
+        <p style="padding: 15x"></p>
+
+        <input type="submit" value="Upload & Analyze" />
+      </form>
+      {% if result %}
+      <h2>Original Image</h2>
+      <img
+        src="data:image/png;base64,{{ result['image_base64'] }}"
+        alt="Original Image"
+      />
+      <h2>Color Histogram:</h2>
+      <img
+        src="data:image/png;base64,{{ result.chart_base64 }}"
+        alt="Color Histogram"
+      />
+      <h2>Color Palette:</h2>
+      <div class="color-palette">
+        {% for color, percentage in result.colors %}
+        <div class="color-swatch" style="background-color: {{ color }}">
+          <span class="color-info">RGB: {{ color }} ({{ percentage }}%)</span>
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+  </body>
+</html>
