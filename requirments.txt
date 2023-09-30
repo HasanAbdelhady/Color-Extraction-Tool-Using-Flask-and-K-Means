@@ -1,0 +1,12 @@
+PIL
+flask
+skimage
+numpy
+pickle
+io
+base64
+matplotlib
+cv2
+os
+validators
+requests
