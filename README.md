@@ -4,11 +4,11 @@
 
 Technologies used:
 
-1- HTML, CSS, JS ( Front-End )
+  1- HTML, CSS, JS ( Front-End )
   
-2- Flask ( Back-End )
+  2- Flask ( Back-End )
 
-3- KNN Machine learning Algorithm ( Color Extraction Model )
+  3- KNN Machine learning Algorithm ( Color Extraction Model )
 
 Let's take a look at the UI:
 1- This is the main, the user is given 2 options to upload images, either by inserting the link to an image or uploading it from their local PC
