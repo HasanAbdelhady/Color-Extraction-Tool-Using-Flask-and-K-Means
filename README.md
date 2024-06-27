@@ -2,8 +2,8 @@
 - It helps them fully analyze the image's colors and get all the RGB Values for each color
 - The number of colors extracted is determined by the user, go that it's dynamic enough for each user
 - Technologies used:
-1- HTML, CSS, JS ( Front-End )
-2- Flask ( Back-End )
+1- HTML, CSS, JS ( Front-End )\n
+2- Flask ( Back-End )\n
 3- KNN Machine learning Algorithm ( Color Extraction Model )
 
 Let's take a look at the UI:
