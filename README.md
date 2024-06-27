@@ -1,8 +1,9 @@
 - This simple color-extraction tool is aimed at graphic designers who might struggle with finding specific colors in their images
 - It helps them fully analyze the image's colors and get all the RGB Values for each color
 - The number of colors extracted is determined by the user, go that it's dynamic enough for each user
-- Technologies used:
-- 
+
+Technologies used:
+
 1- HTML, CSS, JS ( Front-End )
   
 2- Flask ( Back-End )
