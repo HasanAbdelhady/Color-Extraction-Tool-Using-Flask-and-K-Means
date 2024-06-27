@@ -3,7 +3,9 @@
 - The number of colors extracted is determined by the user, go that it's dynamic enough for each user
 - Technologies used:
 1- HTML, CSS, JS ( Front-End )
+  
 2- Flask ( Back-End )
+
 3- KNN Machine learning Algorithm ( Color Extraction Model )
 
 Let's take a look at the UI:
