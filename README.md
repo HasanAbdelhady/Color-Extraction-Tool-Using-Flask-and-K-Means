@@ -8,7 +8,7 @@ Technologies used:
   
   2- Flask ( Back-End )
 
-  3- KNN Machine learning Algorithm ( Color Extraction Model )
+  3- K-Means Unsupervised Machine learning Algorithm ( Color Extraction Model )
 
 Let's take a look at the UI:
 1- This is the main, the user is given 2 options to upload images, either by inserting the link to an image or uploading it from their local PC
